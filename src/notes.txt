@@ -1,0 +1,46 @@
+for styling using material-ui we use something called useStyles
+
+to use context hook
+
+first 
+
+const variablename = createContext();
+const fxnname =({children})=>{
+//logic starts
+const [currency, setCurrency] = useState("INR");
+const [symbol, setSymbol] = useState("₹");
+
+useEffect(()=>{
+if(currency === "INR") setSymbol("₹");
+else if(currency === "USD") setSymbol("$");
+});  
+
+//logic ends
+
+return (
+    <>
+    <variablename.Provider value={{currency , symbol ,setCurrency}}>
+        {children}
+    </variablename.Provider>
+    </>
+  )
+
+
+}
+
+export default fxnname;
+
+
+
+export const Nilesh = () => {
+    return useContext(variablename);
+}
+
+
+
+then in index.js
+wrap the app container into your fxnname tag
+
+then if we want to use features wriiten in context file to use in many pages we can 
+do
+const {currency , setCurrency} = Nilesh();

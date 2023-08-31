@@ -1,0 +1,29 @@
+.maint {
+    height: 100vh;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    /* margin-top: 25px; */
+    /* padding: 40px; */
+  }
+  
+  @media (max-width: 768px) {
+    .maint {
+      width: 100%;
+      height: 100vh;
+      /* margin-top: 8rem; */
+      /* padding: 20px; */
+      /* padding-top: 0; */
+    }
+  }
+  .nnn{
+    background-color: black;
+    
+    
+    /* height: 100vh; */
+    
+  }
+  
